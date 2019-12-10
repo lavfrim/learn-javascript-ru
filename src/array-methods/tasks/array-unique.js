@@ -35,7 +35,7 @@ export default function Arrayunique() {
     solution();
     return (
         <a
-            className="App-link"
+        className="text"
             target="_blank"
             rel="noopener noreferrer"
             href={taskLink}

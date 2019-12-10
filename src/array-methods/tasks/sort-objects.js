@@ -26,7 +26,7 @@ export default function SortObject() {
     solution();
     return (
         <a
-            className="App-link"
+            className="text"
             target="_blank"
             rel="noopener noreferrer"
             href={taskLink}

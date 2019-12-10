@@ -19,7 +19,7 @@ export default function ArrayGetNames() {
     solution();
     return (
         <a
-            className="App-link"
+            className="text"
             target="_blank"
             rel="noopener noreferrer"
             href={taskLink}

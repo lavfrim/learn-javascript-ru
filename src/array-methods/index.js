@@ -15,30 +15,29 @@ import Arrayunique from './tasks/array-unique';
 
 const partName = 'Array methods';
 
+const allTasks = {
+    "camelcase": <Camelcase />,
+    "filter-range": <FilterRange />,
+    "filter-range-in-place": <FilterRangeInPlace />,
+    "sort-back": <SortBack />,
+    "copy-sort-array": <CopySortArray />,
+    "calculator-extendable": <CalculatorExtendable />,
+    "array-get-names": <ArrayGetNames />,
+    "map-objects": <MapObjects />,
+    "sort-objects": <SortObject />,
+    "shuffle": <Shuffle />,
+    "average-age": <AverageAge />,
+    "array-unique": <Arrayunique />,
+};
+
+const tasksShortDescription = [];
+for (let taskShortName in allTasks) {
+    tasksShortDescription.push(taskShortName);
+}
+
 export default function ArrayMethods() {
-const [task, setTask] = useState((<p className="App-link">{'Choose task'}</p>));
+    const [task, setTask] = useState((<h2 className="head-text">{'Choose task'}</h2>));
 
-    const allTasks = {
-        "camelcase": <Camelcase />,
-        "filter-range": <FilterRange />,
-        "filter-range-in-place": <FilterRangeInPlace />,
-        "sort-back": <SortBack />,
-        "copy-sort-array": <CopySortArray />,
-        "calculator-extendable": <CalculatorExtendable />,
-        "array-get-names": <ArrayGetNames />,
-        "map-objects": <MapObjects />,
-        "sort-objects": <SortObject />,
-        "shuffle": <Shuffle />,
-        "average-age": <AverageAge />,
-        "array-unique": <Arrayunique />,
-    };
-
-    const tasksShortDescription = [];
-    for (let taskShortName in allTasks) {
-        tasksShortDescription.push(taskShortName);
-    }
-
-    
     function handleClick(clickEvent) {
         const task = clickEvent.target.innerText;
         if(allTasks[task]) {
@@ -48,20 +47,24 @@ const [task, setTask] = useState((<p className="App-link">{'Choose task'}</p>));
 
     return (
         <>  
-            <h2 className="App-link">{partName}</h2>
-            {tasksShortDescription.map((task, index) => {
-                return (
-                    <button
-                        className="App-button"
-                        key={`${index}-${task}`}
-                        onClick={handleClick}
-                    >
-                        {task}
-                    </button>
-                )
-            })}
+            <div className="list center">
+                <h2 className="head-text">{partName}</h2>
+                {tasksShortDescription.map((task, index) => {
+                    return (
+                        <button
+                            className="button text"
+                            key={`${index}-${task}`}
+                            onClick={handleClick}
+                        >
+                            {task}
+                        </button>
+                    )
+                })}
+            </div>
 
-            {task}
+            <article className="text margin">
+                {task}
+            </article>
         </>
     )
 }
