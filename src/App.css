@@ -26,6 +26,20 @@
 
 .App-link {
   color: #61dafb;
+  margin: 50px;
+}
+
+.App-button {
+  font-size: calc(10px + 2vmin);
+  width: 500px;
+  color: #61dafb;
+  background-color: #282c34;
+  border-color: #61dafb;
+}
+
+.App-button:hover {
+  background-color: #61dafb;
+  color: #282c34;
 }
 
 @keyframes App-logo-spin {
