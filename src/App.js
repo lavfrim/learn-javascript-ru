@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import Playground from './playground';
 import ArrayMethods from './array-methods';
+import String from './string';
+import MapSet from './map-set';
+import ObjectSubject from './object';
+import DateObject from './date-object';
 
 const subjectName = 'Subjects';
 
 
-
 function App() {
-const [subject, setSubject] = useState((<h2 class="head-text">{'Choose subject'}</h2>));
+const [subject, setSubject] = useState((<h2 className="head-text">{'Choose subject'}</h2>));
 
   const allSubjects = {
     "arrey-methods": <ArrayMethods />,
-    "example": <div>{'example'}</div>,
+    "map-set": <MapSet />,
+    "object": <ObjectSubject />,
+    "date-object": <DateObject />,
+    "string": <String />,
+    "playground": <Playground />,    
   };
   
   const subjectsDescription = [];
