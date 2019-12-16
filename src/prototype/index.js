@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 
-import NewDate from './tasks/new-date';
-import GetWeekDay from './tasks/get-week-day';
-import GetDateAgo from './tasks/get-date-ago';
-import GetSecondToday from './tasks/get-seconds-today';
+import PropertyAfterDelete from './tasks/property-after-delete';
+import SearchAlgorithn from './tasks/search-algorithm';
+import HamsterProto from './tasks/hamster-proto';
+import ChangingPrototype from './tasks/changing-prototype';
+import NewObjectSameConstructor from './tasks/new-object-same-constructor';
+import DeferToPrototype from './tasks/defer-to-prototype';
+import DeferToPrototypeExtended from './tasks/defer-to-prototype-extended';
+import DictionaryTostring from './tasks/dictionary-tostring';
 
 
-const partName = 'Date object';
+const partName = 'advanced-functions';
 
 const allTasks = {
-    "new-date": <NewDate />,
-    "get-week-day": <GetWeekDay />,
-    "get-date-ago": <GetDateAgo />,
-    "get-seconds-today": <GetSecondToday />,    
+    "property-after-delete": <PropertyAfterDelete />,
+    "search-algorithm": <SearchAlgorithn />,
+    "hamster-proto": <HamsterProto />,
+    "changing-prototype": <ChangingPrototype />,
+    "new-object-same-constructor": <NewObjectSameConstructor />,
+    "defer-to-prototype": <DeferToPrototype />,
+    "defer-to-prototype-extended": <DeferToPrototypeExtended />,
+    "dictionary-tostring": <DictionaryTostring />
 };
 
 const tasksShortDescription = [];
@@ -20,7 +28,7 @@ for (let taskShortName in allTasks) {
     tasksShortDescription.push(taskShortName);
 }
 
-export default function DateObject() {
+export default function Prototype() {
     const [task, setTask] = useState((<h2 className="head-text">{'Choose task'}</h2>));
 
     function handleClick(clickEvent) {
@@ -29,7 +37,6 @@ export default function DateObject() {
             setTask(allTasks[task]);
         }
     }
-
 
     return (
         <>  

@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 
-import NewDate from './tasks/new-date';
-import GetWeekDay from './tasks/get-week-day';
-import GetDateAgo from './tasks/get-date-ago';
-import GetSecondToday from './tasks/get-seconds-today';
+import RecursionFactorial from './tasks/recursion-factorial';
+import Closure from './tasks/closure';
+import SumManyBrackets from './tasks/sum-many-brackets';
+import NewFunction from './tasks/new-Function';
+import SpyDecorator from './tasks/spy-decorator';
+import DebounceDecorator from './tasks/debounce-decorator';
+import ThrottleDecorator from './tasks/throttling-decorator';
+import ThisContextFunction from './tasks/this-context-function';
 
 
-const partName = 'Date object';
+const partName = 'advanced-functions';
 
 const allTasks = {
-    "new-date": <NewDate />,
-    "get-week-day": <GetWeekDay />,
-    "get-date-ago": <GetDateAgo />,
-    "get-seconds-today": <GetSecondToday />,    
+    "recursion-factorial": <RecursionFactorial />,
+    "closure": <Closure />,
+    "sum-many-brackets": <SumManyBrackets />,
+    "new-Function": <NewFunction />,
+    "spy-decorator": <SpyDecorator />,
+    "debounce-decorator": <DebounceDecorator />,
+    "throttle-decorator": <ThrottleDecorator />,
+    "this": <ThisContextFunction />,
 };
 
 const tasksShortDescription = [];
@@ -20,7 +28,7 @@ for (let taskShortName in allTasks) {
     tasksShortDescription.push(taskShortName);
 }
 
-export default function DateObject() {
+export default function AdvancedFunctions() {
     const [task, setTask] = useState((<h2 className="head-text">{'Choose task'}</h2>));
 
     function handleClick(clickEvent) {
@@ -29,7 +37,6 @@ export default function DateObject() {
             setTask(allTasks[task]);
         }
     }
-
 
     return (
         <>  

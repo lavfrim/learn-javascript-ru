@@ -7,6 +7,8 @@ import String from './string';
 import MapSet from './map-set';
 import ObjectSubject from './object';
 import DateObject from './date-object';
+import AdvancedFunctions from './advanced-functions';
+import Prototype from './prototype';
 
 const subjectName = 'Subjects';
 
@@ -20,6 +22,8 @@ const [subject, setSubject] = useState((<h2 className="head-text">{'Choose subje
     "object": <ObjectSubject />,
     "date-object": <DateObject />,
     "string": <String />,
+    "advanced-functions": <AdvancedFunctions />,
+    "prototype": <Prototype />,
     "playground": <Playground />,    
   };
   

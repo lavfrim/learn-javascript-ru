@@ -4,7 +4,9 @@ import SumSalaries from './tasks/sum-salaries';
 import CountProperties from './tasks/count-properties';
 import Multiplynumeric from './tasks/multiply-numeric';
 import Destructuring from './tasks/destructuring';
+import ObjectConversion from './tasks/object-conversion'
 
+// !!! let clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));
 
 const partName = 'Object';
 
@@ -13,6 +15,7 @@ const allTasks = {
     "count-properties": <CountProperties />,
     "multiply-numeric": <Multiplynumeric />,
     "destructuring": <Destructuring />,
+    "object-conversion": <ObjectConversion />,
 };
 
 const tasksShortDescription = [];
