@@ -1,26 +1,14 @@
 import React, { useState } from 'react';
 
-import PropertyAfterDelete from './tasks/property-after-delete';
-import SearchAlgorithn from './tasks/search-algorithm';
-import HamsterProto from './tasks/hamster-proto';
-import ChangingPrototype from './tasks/changing-prototype';
-import NewObjectSameConstructor from './tasks/new-object-same-constructor';
-import DeferToPrototype from './tasks/defer-to-prototype';
-import DeferToPrototypeExtended from './tasks/defer-to-prototype-extended';
-import DictionaryTostring from './tasks/dictionary-tostring';
+import DelayPromise from './tasks/delay-promise';
+import AsyncAwait from './tasks/async-await';
 
 
-const partName = 'Prototype';
+const partName = 'Promise';
 
 const allTasks = {
-    "property-after-delete": <PropertyAfterDelete />,
-    "search-algorithm": <SearchAlgorithn />,
-    "hamster-proto": <HamsterProto />,
-    "changing-prototype": <ChangingPrototype />,
-    "new-object-same-constructor": <NewObjectSameConstructor />,
-    "defer-to-prototype": <DeferToPrototype />,
-    "defer-to-prototype-extended": <DeferToPrototypeExtended />,
-    "dictionary-tostring": <DictionaryTostring />
+    "delay-promise": <DelayPromise />,
+    "async-await": <AsyncAwait />,
 };
 
 const tasksShortDescription = [];
@@ -28,7 +16,7 @@ for (let taskShortName in allTasks) {
     tasksShortDescription.push(taskShortName);
 }
 
-export default function Prototype() {
+export default function Promise() {
     const [task, setTask] = useState((<h2 className="head-text">{'Choose task'}</h2>));
 
     function handleClick(clickEvent) {
@@ -37,6 +25,7 @@ export default function Prototype() {
             setTask(allTasks[task]);
         }
     }
+
 
     return (
         <>  

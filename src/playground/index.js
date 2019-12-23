@@ -7,26 +7,13 @@ function solution() {
     console.log(`this is the playground`);
     // write your code here
 
-    function askPassword(ok, fail) {
-        let password = prompt("Password?", '');
-        if (password == "rockstar") ok();
-        else fail();
+    function delay(ms) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => resolve(), ms);
+        });
     }
-    
-    let user = {
-        name: 'Вася',
-        
-        loginOk() {
-            alert(`${this.name} logged in`);
-        },
-        
-        loginFail() {
-            alert(`${this.name} failed to log in`);
-        },
-        
-    };
-    
-    askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+      
+    delay(3000).then(() => console.log('выполнилось через 3 секунды'));
 
     // ... 
 }

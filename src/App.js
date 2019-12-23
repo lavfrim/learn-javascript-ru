@@ -9,6 +9,7 @@ import ObjectSubject from './object';
 import DateObject from './date-object';
 import AdvancedFunctions from './advanced-functions';
 import Prototype from './prototype';
+import Promise from './promise';
 
 const subjectName = 'Subjects';
 
@@ -17,6 +18,7 @@ function App() {
 const [subject, setSubject] = useState((<h2 className="head-text">{'Choose subject'}</h2>));
 
   const allSubjects = {
+    "playground": <Playground />,
     "arrey-methods": <ArrayMethods />,
     "map-set": <MapSet />,
     "object": <ObjectSubject />,
@@ -24,7 +26,7 @@ const [subject, setSubject] = useState((<h2 className="head-text">{'Choose subje
     "string": <String />,
     "advanced-functions": <AdvancedFunctions />,
     "prototype": <Prototype />,
-    "playground": <Playground />,    
+    "promise": <Promise />,
   };
   
   const subjectsDescription = [];
